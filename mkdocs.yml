@@ -12,7 +12,7 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Dark mode
-      primary: orange
+      primary: amber
       accent: indigo
 
     # Light Mode
@@ -30,12 +30,16 @@ plugins:
   - blog:
       blog_dir: .
 
+  - tags:
+
+
 
 nav:
-  - About Me: aboutme/resume.md
+  - About Me: heropage.html
   - Blogs:
-      - Conversational AI: posts/content_gtm_blog (1).md
+      - Conversational AI: posts/content_gtm_blog.md
       - Prompting Strategy: posts/prompting_technique_blog.md
+  
 extra_css:
-  - styles/overrides.css  
+  - styles/profile.css  
     

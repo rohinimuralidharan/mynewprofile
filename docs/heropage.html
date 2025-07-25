@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohini Muralidharan - Content Design Leader</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            background: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(45deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+        }
+
+        /* Animated background grid */
+        .grid-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+            opacity: 0.3;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        /* Geometric shapes floating */
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #00ffff, #ff00ff);
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .shape:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: 10%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 70%;
+            right: 30%;
+            animation-delay: 2s;
+        }
+
+        .shape:nth-child(3) {
+            width: 80px;
+            height: 80px;
+            bottom: 20%;
+            left: 10%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(180deg); }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text {
+            position: relative;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #00ffff 0%, #ff00ff 50%, #ffff00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+            position: relative;
+        }
+
+        .hero-text h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #00ffff, #ff00ff);
+            border-radius: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #00ffff;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .description {
+            font-size: 1.2rem;
+            color: #cccccc;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            max-width: 500px;
+        }
+
+        /* Hexagonal stats */
+        .stats-container {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-hex {
+            position: relative;
+            width: 120px;
+            height: 104px;
+            background: linear-gradient(135deg, #00ffff20, #ff00ff20);
+            margin: 30px 0;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .stat-hex::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, #00ffff, #ff00ff);
+            border-radius: 12px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .stat-hex:hover::before {
+            opacity: 1;
+        }
+
+        .stat-hex:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: #aaaaaa;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+
+        /* Interactive tech stack */
+        .tech-visualization {
+            position: relative;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tech-orbit {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: 2px solid rgba(0, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .tech-item {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #00ffff15, #ff00ff15);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: counterRotate 20s linear infinite;
+        }
+
+        @keyframes counterRotate {
+            from { transform: rotate(360deg); }
+            to { transform: rotate(0deg); }
+        }
+
+        .tech-item:hover {
+            background: linear-gradient(135deg, #00ffff30, #ff00ff30);
+            border-color: #00ffff;
+            transform: scale(1.2);
+            z-index: 10;
+        }
+
+        .tech-item:nth-child(1) { top: -30px; left: 50%; transform: translateX(-50%); }
+        .tech-item:nth-child(2) { top: 25%; right: -30px; }
+        .tech-item:nth-child(3) { bottom: 25%; right: -30px; }
+        .tech-item:nth-child(4) { bottom: -30px; left: 50%; transform: translateX(-50%); }
+        .tech-item:nth-child(5) { bottom: 25%; left: -30px; }
+        .tech-item:nth-child(6) { top: 25%; left: -30px; }
+
+        .center-logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #00ffff, #ff00ff);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #000;
+            font-weight: 700;
+        }
+
+        .cta-section {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00ffff, #ff00ff);
+            color: #000;
+            font-weight: 700;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #ff00ff, #00ffff);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+
+        .btn-primary:hover::before {
+            left: 0;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #00ffff;
+            border: 2px solid #00ffff;
+        }
+
+        .btn-secondary:hover {
+            background: #00ffff;
+            color: #000;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+
+        /* Glitch effect on hover */
+        .hero-text h1:hover {
+            animation: glitch 0.3s ease-in-out;
+        }
+
+        @keyframes glitch {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(-2px); }
+            40% { transform: translateX(2px); }
+            60% { transform: translateX(-2px); }
+            80% { transform: translateX(2px); }
+            100% { transform: translateX(0); }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .stats-container {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .tech-orbit {
+                width: 250px;
+                height: 250px;
+            }
+
+            .tech-item {
+                width: 50px;
+                height: 50px;
+                font-size: 0.7rem;
+            }
+
+            .cta-section {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="grid-bg"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Rohini Muralidharan</h1>
+                    <p class="subtitle">Content Design Manager</p>
+                    <p class="description">
+                        Architecting intelligent content ecosystems that transform complex technical information 
+                        into delightful user experiences. Leading AI-driven strategies that measurably reduce 
+                        support overhead while amplifying engagement.
+                    </p>
+
+                    <div class="stats-container">
+                        <div class="stat-hex">
+                            <div class="stat-number">20+</div>
+                            <div class="stat-label">Years<br>Experience</div>
+                        </div>
+                        <div class="stat-hex">
+                            <div class="stat-number">40%</div>
+                            <div class="stat-label">Support<br>Reduction</div>
+                        </div>
+                        <div class="stat-hex">
+                            <div class="stat-number">50%</div>
+                            <div class="stat-label">Engagement<br>Boost</div>
+                        </div>
+                    </div>
+
+                    <div class="cta-section">
+                        <a href="#portfolio" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            Explore My Work
+                        </a>
+                        <a href="mailto:rohinimurali@yahoo.com" class="btn btn-secondary">
+                            <i class="fas fa-paper-plane"></i>
+                            Connect
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tech-visualization">
+                    <div class="tech-orbit">
+                        <div class="tech-item">API<br>Docs</div>
+                        <div class="tech-item">AI<br>Strategy</div>
+                        <div class="tech-item">UX<br>Design</div>
+                        <div class="tech-item">Data<br>Analytics</div>
+                        <div class="tech-item">Team<br>Leadership</div>
+                        <div class="tech-item">Content<br>Strategy</div>
+                        <div class="center-logo">RM</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tech orbit hover effects
+            const techItems = document.querySelectorAll('.tech-item');
+            techItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.animationPlayState = 'paused';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.animationPlayState = 'running';
+                });
+            });
+
+            // Stats animation on load
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach((stat, index) => {
+                setTimeout(() => {
+                    stat.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        stat.style.transform = 'scale(1)';
+                    }, 200);
+                }, index * 200);
+            });
+
+            // Smooth scroll for portfolio link
+            document.querySelector('.btn-primary').addEventListener('click', function(e) {
+                e.preventDefault();
+                // Add your portfolio scroll logic here
+                console.log('Navigating to portfolio...');
+            });
+
+            // Add typing effect to subtitle
+            const subtitle = document.querySelector('.subtitle');
+            const text = subtitle.textContent;
+            subtitle.textContent = '';
+            
+            let i = 0;
+            const typeWriter = () => {
+                if (i < text.length) {
+                    subtitle.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            };
+            
+            setTimeout(typeWriter, 1000);
+        });
+    </script>
+</body>
+</html>

@@ -1,6 +1,15 @@
 ---
 date:
   created: 2025-07-25
+categories: 
+  - Content Design
+  - AI
+tags:
+  - Conversational AI
+  - Content Design
+  - GtM
+authors:
+  - rohini
 ---
 
 # Conversational AI: How AI-powered Storytelling Can Drive GTM Success

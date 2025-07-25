@@ -2,6 +2,11 @@
 date:
   created: 2025-07-25
 draft: true
+categories:
+  - AI
+tags:
+  - Content Design
+  - Prompt Engineering
 ---
 
 # How to Engineer Compelling Blogs Through Conversational AI
