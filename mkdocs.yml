@@ -1,0 +1,41 @@
+site_name: RohiniM
+site_description: This is a profile page.
+site_url: https://rohinimuralidharan.com
+theme:
+  name: material
+  features:
+    - navigation.tabs
+
+  palette: 
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: orange
+      accent: indigo
+
+    # Light Mode
+    - scheme: teal
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: blue
+      accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+plugins:
+  - search
+  - blog:
+      blog_dir: .
+
+
+nav:
+  - About Me: aboutme/resume.md
+  - Blogs:
+      - Conversational AI: posts/content_gtm_blog (1).md
+      - Prompting Strategy: posts/prompting_technique_blog.md
+extra_css:
+  - styles/overrides.css  
+    
