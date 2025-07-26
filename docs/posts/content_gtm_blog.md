@@ -39,7 +39,7 @@ Think about it. When everyone has access to the same content generation tools, p
 
 The transformation happening in content creation mirrors what we've seen in software development. We're shifting from being content artisans (crafting every word by hand) to content architects, designing systems and frameworks that AI can execute brilliantly.
 
-**Case Study: Netflix's Content AI Strategy**
+**Netflix's Content AI Strategy**
 
 Netflix doesn't just use AI to recommend shows; they use it to optimize everything from thumbnail selection to trailer creation. But here's the kicker: their most successful campaigns still rely on human insight to identify the emotional hooks that drive subscriber behavior. Their "Stranger Things" campaign succeeded not because AI wrote better copy, but because human strategists identified the nostalgic emotional triggers that AI then helped scale across millions of personalized touchpoints.
 

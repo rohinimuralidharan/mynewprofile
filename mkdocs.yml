@@ -1,4 +1,4 @@
-site_name: RohiniM
+site_name: Rohini Muralidharan
 site_description: This is a profile page.
 site_url: https://rohinimuralidharan.com
 theme:
@@ -29,10 +29,28 @@ plugins:
   - search
   - blog:
       blog_dir: .
+      post_url_format: "{slug}"
+  
+#  - git-revision-date-localized:
+#      fallback_to_build_date: false
+#      type: date
+#      enable_creation_date: true
+#      enabled: true
+
+  # - git-committers:
+  #    repository: https://github.com/rohinimuralidharan/mynewprofile/
+  #    branch: main
+  #    token: !ENV GH_TOKEN
+  #    enabled: true
 
   - tags:
 
-
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/rohinimuralidharan/
+    - icon: fontawesome/brands/github
+      link: https://github.com/rohinimuralidharan
 
 nav:
   - About Me: heropage.html
