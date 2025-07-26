@@ -1,0 +1,27 @@
+/* Change heading font, size, weight, and color */
+.md-typeset h1 {
+  font-family: "Roboto", serif;   /* Custom font */
+  font-size: 1.3rem;               /* Custom size */
+  font-weight: 700;                /* Boldness */
+  color: #0e0e0e;                  /* Custom color */
+}
+
+.md-typeset h2 {
+  font-family: "Roboto", serif;
+  font-size: 1.0rem;
+  font-weight: 500;
+  color: #0e0e0e;
+  border-bottom: 2px solid #0066cc;  /* Optional underline */
+  padding-bottom: 0.3rem;
+}
+
+/* Target all headings inside the content area */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-weight: 700;  /* Bold */
+  color: var(--md-default-fg-color);  /* Auto adapts to light/dark mode */
+} 
