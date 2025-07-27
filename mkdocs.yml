@@ -53,7 +53,7 @@ extra:
       link: https://github.com/rohinimuralidharan
 
 nav:
-  - About Me: heropage.html
+  - About Me: overview.html
   - Blogs:
       - Conversational AI: posts/content_gtm_blog.md
       - Prompting Strategy: posts/prompting_technique_blog.md
