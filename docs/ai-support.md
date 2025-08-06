@@ -20,16 +20,16 @@ Think of it as having a senior engineer sitting next to you, ready to troublesho
 
 ### What Makes This Different
 
-**🧠 Context-Aware Intelligence**  
+**Context-Aware Intelligence**  
 The assistant analyzes your specific error messages, environment, and setup to provide targeted solutions rather than generic advice.
 
-**🔬 Live Diagnostics**  
+**Live Diagnostics**  
 Test your configurations, API keys, and connections directly within the interface—no need to switch between tools.
 
-**🎯 Progressive Problem Solving**  
+**Progressive Problem Solving**  
 Structured step-by-step guidance that adapts based on what it discovers about your issue.
 
-**⚡ Instant Resolution**  
+**Instant Resolution**  
 Most common issues are resolved in under 2 minutes, with clear explanations of what went wrong and how to prevent it.
 
 ---
@@ -45,23 +45,23 @@ Most common issues are resolved in under 2 minutes, with clear explanations of w
 </div>
 
 <div id="ai-assistant-container" style="display: none; margin-top: 30px;">
-  <iframe src="../ai-troubleshooter.html" width="100%" height="700px" frameborder="0" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"></iframe>
+  <iframe src="../assets/ai-troubleshooter.html" width="100%" height="700px" frameborder="0" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"></iframe>
 </div>
 
 ---
 
 ## How It Works
 
-1. **🎤 Describe Your Issue**  
+1. **Describe Your Issue**  
    Tell the assistant what's happening in natural language—paste error messages, describe symptoms, or just say "it's not working"
 
-2. **🔍 Intelligent Analysis**  
+2. **Intelligent Analysis**  
    The AI analyzes patterns in your description and immediately narrows down potential causes
 
-3. **🧪 Live Testing**  
+3. **Live Testing**  
    Test your actual configurations safely within the interface with real-time feedback
 
-4. **✅ Get Solutions**  
+4. **Get Solutions**  
    Receive step-by-step instructions tailored to your specific situation and environment
 
 ---
