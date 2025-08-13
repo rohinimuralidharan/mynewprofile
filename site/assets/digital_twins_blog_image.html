@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Twins Architecture Blog Image</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .blog-image {
+            width: 1200px;
+            height: 630px;
+            position: relative;
+            background: linear-gradient(135deg, #0a0f1c 0%, #1a2332 50%, #0f1419 100%);
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Title section */
+        .title-section {
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            z-index: 20;
+        }
+
+        .main-title {
+            font-size: 42px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #8fb3d4;
+            font-weight: 400;
+        }
+
+        /* Split view container */
+        .twin-container {
+            position: absolute;
+            top: 130px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1000px;
+            height: 420px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Physical Building Side */
+        .physical-side {
+            width: 45%;
+            height: 100%;
+            position: relative;
+            background: linear-gradient(145deg, #1a2332 0%, #243447 100%);
+            border-radius: 15px;
+            border: 2px solid #334155;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .side-label {
+            position: absolute;
+            top: 15px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        .physical-label {
+            background: linear-gradient(90deg, #ff6b35, #f7931e);
+            color: #ffffff;
+        }
+
+        .digital-label {
+            background: linear-gradient(90deg, #00d4ff, #0099cc);
+            color: #ffffff;
+        }
+
+        .building-3d {
+            width: 180px;
+            height: 250px;
+            position: relative;
+            margin-top: 30px;
+        }
+
+        .building-face {
+            position: absolute;
+            background: linear-gradient(145deg, #2a3441 0%, #3a4556 100%);
+            border: 1px solid #4a5568;
+        }
+
+        .front-face {
+            width: 180px;
+            height: 220px;
+            bottom: 0;
+            transform-origin: bottom;
+            animation: buildingBreathe 4s ease-in-out infinite;
+        }
+
+        .side-face {
+            width: 40px;
+            height: 220px;
+            right: -40px;
+            bottom: 0;
+            transform: skewY(-30deg);
+            background: linear-gradient(145deg, #1a2332 0%, #2a3441 100%);
+        }
+
+        .top-face {
+            width: 180px;
+            height: 40px;
+            top: -20px;
+            transform: skewX(-30deg);
+            background: linear-gradient(145deg, #3a4556 0%, #4a5568 100%);
+        }
+
+        @keyframes buildingBreathe {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        /* Building windows with sensor data */
+        .window {
+            position: absolute;
+            width: 25px;
+            height: 30px;
+            background: #1e40af;
+            border: 1px solid #3b82f6;
+            animation: windowActivity 3s ease-in-out infinite;
+        }
+
+        .window:nth-child(1) { top: 40px; left: 20px; animation-delay: 0s; }
+        .window:nth-child(2) { top: 40px; left: 60px; animation-delay: 0.5s; }
+        .window:nth-child(3) { top: 40px; left: 100px; animation-delay: 1s; }
+        .window:nth-child(4) { top: 40px; left: 140px; animation-delay: 1.5s; }
+        .window:nth-child(5) { top: 90px; left: 20px; animation-delay: 2s; }
+        .window:nth-child(6) { top: 90px; left: 60px; animation-delay: 2.5s; }
+        .window:nth-child(7) { top: 90px; left: 100px; animation-delay: 0.3s; }
+        .window:nth-child(8) { top: 90px; left: 140px; animation-delay: 0.8s; }
+        .window:nth-child(9) { top: 140px; left: 20px; animation-delay: 1.3s; }
+        .window:nth-child(10) { top: 140px; left: 60px; animation-delay: 1.8s; }
+
+        @keyframes windowActivity {
+            0%, 100% { 
+                background: #1e40af;
+                box-shadow: 0 0 5px rgba(59, 130, 246, 0.3);
+            }
+            50% { 
+                background: #3b82f6;
+                box-shadow: 0 0 15px rgba(59, 130, 246, 0.8);
+            }
+        }
+
+        /* Sensor indicators */
+        .sensor {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: sensorPulse 2s ease-in-out infinite;
+        }
+
+        .sensor:nth-child(1) { top: 30px; right: 10px; }
+        .sensor:nth-child(2) { top: 80px; left: 10px; animation-delay: 0.5s; }
+        .sensor:nth-child(3) { top: 130px; right: 15px; animation-delay: 1s; }
+        .sensor:nth-child(4) { bottom: 50px; left: 15px; animation-delay: 1.5s; }
+
+        @keyframes sensorPulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 0 5px rgba(16, 185, 129, 0.5);
+            }
+            50% { 
+                transform: scale(1.5);
+                box-shadow: 0 0 15px rgba(16, 185, 129, 1);
+            }
+        }
+
+        /* Digital Twin Side */
+        .digital-side {
+            width: 45%;
+            height: 100%;
+            position: relative;
+            background: linear-gradient(145deg, #0f1419 0%, #1a2332 100%);
+            border-radius: 15px;
+            border: 2px solid #00d4ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+        }
+
+        .digital-building {
+            width: 180px;
+            height: 250px;
+            position: relative;
+            margin-top: 30px;
+        }
+
+        .digital-face {
+            position: absolute;
+            background: linear-gradient(145deg, rgba(0, 212, 255, 0.1) 0%, rgba(0, 153, 204, 0.2) 100%);
+            border: 2px solid #00d4ff;
+            backdrop-filter: blur(5px);
+        }
+
+        .digital-front {
+            width: 180px;
+            height: 220px;
+            bottom: 0;
+            animation: digitalPulse 3s ease-in-out infinite;
+        }
+
+        .digital-side-face {
+            width: 40px;
+            height: 220px;
+            right: -40px;
+            bottom: 0;
+            transform: skewY(-30deg);
+            background: linear-gradient(145deg, rgba(0, 212, 255, 0.05) 0%, rgba(0, 153, 204, 0.15) 100%);
+            border: 1px solid rgba(0, 212, 255, 0.8);
+        }
+
+        .digital-top {
+            width: 180px;
+            height: 40px;
+            top: -20px;
+            transform: skewX(-30deg);
+            background: linear-gradient(145deg, rgba(0, 212, 255, 0.15) 0%, rgba(0, 153, 204, 0.25) 100%);
+            border: 1px solid rgba(0, 212, 255, 0.8);
+        }
+
+        @keyframes digitalPulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+            }
+            50% { 
+                transform: scale(1.03);
+                box-shadow: 0 0 40px rgba(0, 212, 255, 0.6);
+            }
+        }
+
+        /* Digital windows with data */
+        .digital-window {
+            position: absolute;
+            width: 25px;
+            height: 30px;
+            background: rgba(0, 212, 255, 0.3);
+            border: 1px solid #00d4ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8px;
+            color: #00d4ff;
+            font-weight: bold;
+            animation: dataUpdate 2s ease-in-out infinite;
+        }
+
+        .digital-window:nth-child(1) { top: 40px; left: 20px; animation-delay: 0s; }
+        .digital-window:nth-child(2) { top: 40px; left: 60px; animation-delay: 0.2s; }
+        .digital-window:nth-child(3) { top: 40px; left: 100px; animation-delay: 0.4s; }
+        .digital-window:nth-child(4) { top: 40px; left: 140px; animation-delay: 0.6s; }
+        .digital-window:nth-child(5) { top: 90px; left: 20px; animation-delay: 0.8s; }
+        .digital-window:nth-child(6) { top: 90px; left: 60px; animation-delay: 1s; }
+        .digital-window:nth-child(7) { top: 90px; left: 100px; animation-delay: 1.2s; }
+        .digital-window:nth-child(8) { top: 90px; left: 140px; animation-delay: 1.4s; }
+        .digital-window:nth-child(9) { top: 140px; left: 20px; animation-delay: 1.6s; }
+        .digital-window:nth-child(10) { top: 140px; left: 60px; animation-delay: 1.8s; }
+
+        @keyframes dataUpdate {
+            0%, 100% { 
+                background: rgba(0, 212, 255, 0.3);
+                box-shadow: inset 0 0 10px rgba(0, 212, 255, 0.2);
+            }
+            50% { 
+                background: rgba(0, 212, 255, 0.7);
+                box-shadow: inset 0 0 20px rgba(0, 212, 255, 0.5);
+            }
+        }
+
+        /* Central connection bridge */
+        .connection-bridge {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b35, #00d4ff, #ff6b35);
+            background-size: 200% 100%;
+            animation: dataFlow 2s linear infinite;
+            z-index: 10;
+        }
+
+        @keyframes dataFlow {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* Data streams */
+        .data-stream {
+            position: absolute;
+            width: 2px;
+            height: 40px;
+            background: linear-gradient(to top, transparent, #00d4ff, transparent);
+            animation: streamFlow 1.5s linear infinite;
+        }
+
+        .stream-1 { top: 30%; left: 48%; animation-delay: 0s; }
+        .stream-2 { top: 35%; left: 52%; animation-delay: 0.3s; }
+        .stream-3 { top: 25%; left: 50%; animation-delay: 0.6s; }
+
+        @keyframes streamFlow {
+            0% { opacity: 0; transform: translateY(20px); }
+            50% { opacity: 1; }
+            100% { opacity: 0; transform: translateY(-20px); }
+        }
+
+        /* Real-time data indicators */
+        .data-indicator {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #00d4ff;
+            border-radius: 5px;
+            padding: 5px 8px;
+            font-size: 10px;
+            color: #00d4ff;
+            animation: indicatorBlink 2s ease-in-out infinite;
+        }
+
+        .temp-indicator {
+            top: 50px;
+            right: -80px;
+        }
+
+        .energy-indicator {
+            bottom: 80px;
+            right: -90px;
+        }
+
+        .occupancy-indicator {
+            top: 120px;
+            left: -85px;
+        }
+
+        @keyframes indicatorBlink {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+
+        /* AI processing visualization */
+        .ai-core {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 30px;
+            background: linear-gradient(90deg, #8b5cf6, #a855f7);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            animation: aiProcessing 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes aiProcessing {
+            from { box-shadow: 0 0 15px rgba(139, 92, 246, 0.5); }
+            to { box-shadow: 0 0 25px rgba(139, 92, 246, 0.8); }
+        }
+
+        @media (max-width: 768px) {
+            .blog-image {
+                width: 100%;
+                max-width: 800px;
+                height: 500px;
+            }
+            
+            .twin-container {
+                width: 95%;
+                flex-direction: column;
+                height: 350px;
+            }
+            
+            .physical-side,
+            .digital-side {
+                width: 100%;
+                height: 45%;
+            }
+            
+            .building-3d,
+            .digital-building {
+                width: 120px;
+                height: 150px;
+            }
+            
+            .main-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-image">
+        <!-- Title section -->
+        <div class="title-section">
+            <h1 class="main-title">AI-Driven Digital Twins Technology</h1>
+            <p class="subtitle">Real-time Building Intelligence & Optimization</p>
+        </div>
+
+        <!-- Main twin visualization -->
+        <div class="twin-container">
+            <!-- Physical Building -->
+            <div class="physical-side">
+                <div class="side-label physical-label">Physical Building</div>
+                
+                <div class="building-3d">
+                    <div class="building-face front-face">
+                        <div class="window"></div>
+                        <div class="window"></div>
+                        <div class="window"></div>
+                        <div class="window"></div>
+                        <div class="window"></div>
+                        <div class="window"></div>
+                        <div class="window"></div>
+                        <div class="window"></div>
+                        <div class="window"></div>
+                        <div class="window"></div>
+                    </div>
+                    <div class="building-face side-face"></div>
+                    <div class="building-face top-face"></div>
+                    
+                    <div class="sensor"></div>
+                    <div class="sensor"></div>
+                    <div class="sensor"></div>
+                    <div class="sensor"></div>
+                </div>
+            </div>
+
+            <!-- Data connection -->
+            <div class="connection-bridge"></div>
+            <div class="data-stream stream-1"></div>
+            <div class="data-stream stream-2"></div>
+            <div class="data-stream stream-3"></div>
+
+            <!-- Digital Twin -->
+            <div class="digital-side">
+                <div class="side-label digital-label">Digital Twin</div>
+                
+                <div class="digital-building">
+                    <div class="digital-face digital-front">
+                        <div class="digital-window">22°C</div>
+                        <div class="digital-window">45%</div>
+                        <div class="digital-window">OK</div>
+                        <div class="digital-window">LOW</div>
+                        <div class="digital-window">18°C</div>
+                        <div class="digital-window">67%</div>
+                        <div class="digital-window">HIGH</div>
+                        <div class="digital-window">ON</div>
+                        <div class="digital-window">24°C</div>
+                        <div class="digital-window">89%</div>
+                    </div>
+                    <div class="digital-face digital-side-face"></div>
+                    <div class="digital-face digital-top"></div>
+                    
+                    <div class="data-indicator temp-indicator">Temp: 23°C</div>
+                    <div class="data-indicator energy-indicator">Energy: 2.3kW</div>
+                    <div class="data-indicator occupancy-indicator">Occupancy: 67%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Core -->
+        <div class="ai-core">AI Processing</div>
+    </div>
+</body>
+</html>
