@@ -14,6 +14,11 @@ authors:
 
 # Revolutionizing Architectural Design through AI-Driven Digital Twins Technology for Sustainable and Smart Environments
 
+From the humble mud hut to the soaring heights of modern skyscrapers, architecture has always served as a mirror to human progress, reflecting our aspirations and adapting to our evolving needs. However, the modern built environment faces unprecedented challenges due to climate change, resource depletion, and rapid urbanization, requiring a fundamental shift in architectural and construction practices. Traditional methodologies, while effective in their time, are increasingly proving inadequate in addressing these complex demands (Mandičák, Spišáková & Mésároš, 2024). They argue that the integration of sustainable design principles with Building Information Modeling (BIM) can offer partial solutions, yet they acknowledge that conventional BIM tools lack real-time adaptability and predictive capabilities necessary for genuinely sustainable and intelligent environments.
+
+
+<!-- more -->
+
 <div style="width: 100%; max-width: 1200px; margin: 20px auto;">
   <iframe 
     src="assets/digital_twins_blog_image.html" 
@@ -23,12 +28,6 @@ authors:
     style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
   </iframe>
 </div>
-
-From the humble mud hut to the soaring heights of modern skyscrapers, architecture has always served as a mirror to human progress, reflecting our aspirations and adapting to our evolving needs. However, the modern built environment faces unprecedented challenges due to climate change, resource depletion, and rapid urbanization, requiring a fundamental shift in architectural and construction practices. Traditional methodologies, while effective in their time, are increasingly proving inadequate in addressing these complex demands (Mandičák, Spišáková & Mésároš, 2024). They argue that the integration of sustainable design principles with Building Information Modeling (BIM) can offer partial solutions, yet they acknowledge that conventional BIM tools lack real-time adaptability and predictive capabilities necessary for genuinely sustainable and intelligent environments.
-
-
-<!-- more -->
-
 
 While BIM has improved design coordination and lifecycle management, its reliance on static models limits its potential in dynamic, data-driven decision-making (Elfarri, Rasheed & San, 2022). They emphasize that current BIM systems, despite their ability to visualize and organize project data, do not inherently provide predictive insights or real-time responsiveness to environmental and occupancy changes. This gap underscores the necessity for more advanced frameworks that can integrate real-time data streams, simulate different environmental scenarios, and dynamically optimize building performance.
 
