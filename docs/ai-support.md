@@ -14,7 +14,7 @@ tags:
 
 ## Welcome to the Future of Technical Support
 
-Gone are the days of scrolling through endless documentation hoping to find your specific issue. Our AI-powered assistant doesn't just provide answers—it **understands your problem**, **diagnoses the root cause**, and **guides you to a solution** in real-time.
+Gone are the days of scrolling through endless documentation hoping to find your specific issue. Our AI-powered assistant doesn't just provide answers—it understands your problem, diagnoses the root cause, and guides you to a solution in real-time.
 
 Think of it as having a senior engineer sitting next to you, ready to troubleshoot any technical challenge you're facing.
 
