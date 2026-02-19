@@ -69,34 +69,50 @@ The future of architectural design lies not in technological determinism, but in
 ## References
 •	Chen, X., Liu, R., & Wang, H. (2023). AI-driven energy management in smart buildings. Energy and Buildings, 275, 112843.
 Available at: https://doi.org/10.1016/j.enbuild.2023.112843 
+
 •	Cosmas, A., Cruz, G., Cubela, S., Huntington, M., Rahimi, S., & Tiwari, S. (2024). Digital twins and generative AI: A powerful pairing. McKinsey & Company. 
 Available at: https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/tech-forward/digital-twins-and-generative-ai-a-powerful-pairing 
+
 •	Billanes, J.D., Ma, Z.G. and Jørgensen, B.N., 2025. Data-Driven Technologies for Energy Optimization in Smart Buildings: A Scoping Review. Energies, 18(2), p.290. Available at: https://doi.org/10.3390/en18020290 
+
 •	Elfarri, E. M., Rasheed, A., & San, O. (2022). Artificial intelligence-driven digital twin of a modern house demonstrated in virtual reality. arXiv preprint arXiv:2212.07102. Available at: https://arxiv.org/abs/2212.07102 
+
 •	Grieves, M., & Vickers, J. (2021). Digital twin: The evolution of a key concept in Industry 4.0. IEEE Access, 9, 87654-87667. 
 Available at: https://polytechnic.purdue.edu/sites/default/files/files/Fall16-%20Grieves%20-%20Digital%20Twin%20Mitigating%20Uppredicatable%20systems.pdf 
+
 •	Haidar, N., Tamani, N., Ghamri-Doudane, Y. and Boujou, A., 2023. Selective reinforcement graph mining approach for smart building energy and occupant comfort optimization. Building and Environment.
 Available at: https://doi.org/10.1016/j.buildenv.2022.109806 
+
 •	Hassan, M., & Kim, J. (2023). Comparative analysis of AI-driven building management systems. Energy and Buildings, 278, 112957. 
 Available at: https://doi.org/10.1016/j.enbuild.2023.112957 
+
 •	Neale, J., Shamsi, M.H., Mangina, E., Finn, D. and O’Donnell, J. (2022). Accurate identification of influential building parameters through an integration of global sensitivity and feature selection techniques. Applied Energy, 315, p.118956. 
 Available at: https://doi.org/10.1016/j.apenergy.2022.118956 
+
 •	Mandičák, T., Spišáková, M., & Mésároš, P. (2024). Sustainable Design and Building Information Modeling of Construction Project Management towards a Circular Economy. Sustainability, 16(11), 4376. 
 Available at: https://doi.org/10.3390/su16114376 
+
 •	Martinez, A., Rodriguez, B., & Lee, K. (2022). AI-powered building performance simulation. Energy and Buildings, 268, 112013. 
 Available at: https://doi.org/10.1016/j.enbuild.2022.112013 
+
 •	Nikolov, A., & Barrett, P. (2023). AI-driven digital twins and green building certification. Sustainable Cities and Society, 89, 104521. 
 Available at: https://doi.org/10.1016/j.scs.2023.104521 
+
 •	Ni, Z., Zhang, C., Karlsson, M., & Gong, S. (2024). Edge-based Parametric Digital Twins for Intelligent Building Indoor Climate Modeling. arXiv preprint arXiv:2403.04326. 
 Available at: https://arxiv.org/abs/2403.04326 
+
 •	Park, J., & Lee, S. (2021). Resource optimization in smart buildings. Building and Environment. 
 Available at: https://doi.org/10.1016/j.buildenv.2021.108394 
+
 •	Ramirez, C., Wilson, J., & Thompson, K. (2022). Evolution of AI integration in building management systems. Automation in Construction. 
 Available at: https://doi.org/10.1016/j.autcon.2022.104387 
+
 •	Thompson, K., & Brown, R. (2022). Energy savings through AI-driven building management. Energy and Buildings, 271, 112736.
 Available at: https://doi.org/10.1016/j.enbuild.2022.112736 
+
 •	Yamamoto, K., & Fischer, M. (2023). Carbon reduction through AI-optimized building systems. Energy and Buildings, 282, 113257. 
 Available at: https://doi.org/10.1016/j.enbuild.2023.113257 
+
 •	Zhang, W., Liu, F. and Fan, R., 2018. Improved thermal comfort modeling for smart buildings: A data analytics study. International Journal of Electrical Power & Energy Systems. 
 Available at:  https://doi.org/10.1016/j.ijepes.2018.06.026. 
 
