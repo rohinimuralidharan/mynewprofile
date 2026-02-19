@@ -19,15 +19,7 @@ From the humble mud hut to the soaring heights of modern skyscrapers, architectu
 
 <!-- more -->
 
-<div style="width: 100%; max-width: 1200px; margin: 20px auto;">
-  <iframe 
-    src="assets/digital_twins_blog_image.html" 
-    width="100%" 
-    height="630" 
-    frameborder="0"
-    style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-  </iframe>
-</div>
+![](../assets/digital_twins_blog_image.png)
 
 While BIM has improved design coordination and lifecycle management, its reliance on static models limits its potential in dynamic, data-driven decision-making (Elfarri, Rasheed & San, 2022). They emphasize that current BIM systems, despite their ability to visualize and organize project data, do not inherently provide predictive insights or real-time responsiveness to environmental and occupancy changes. This gap underscores the necessity for more advanced frameworks that can integrate real-time data streams, simulate different environmental scenarios, and dynamically optimize building performance.
 
